@@ -1,0 +1,30 @@
+{
+  "name": "stylelint-config-ponominalu",
+  "version": "1.0.0",
+  "description": "ponominalu.ru config for stylelint",
+  "main": "index.js",
+  "author": "Ponominalu.ru",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cultserv/stylelint-config-ponominalu.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cultserv/stylelint-config-ponominalu/issues"
+  },
+  "homepage": "https://github.com/cultserv/stylelint-config-ponominalu#readme",
+  "keywords": [
+    "stylelint",
+    "ponominalu",
+    "style guide"
+  ],
+  "peerDependencies": {
+    "lodash": "latest",
+    "stylelint": "latest",
+    "stylelint-order": "^3.1.1",
+    "stylelint-scss": "^3.11.1",
+    "stylelint-value-list-box-shadow-inset-first": "^2.0.1",
+    "stylelint-processor-arbitrary-tags": "^0.1.0",
+    "stylelint-config-standard": "^19.0.0"
+  }
+}
