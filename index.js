@@ -5,7 +5,6 @@ module.exports = {
     "stylelint-value-list-box-shadow-inset-first"
   ],
   "extends": "stylelint-config-standard",
-  "processors": ["stylelint-processor-arbitrary-tags"],
   "rules": {
     "block-no-empty": null,
     
@@ -97,15 +96,6 @@ module.exports = {
     ],
     "declaration-no-important": true,
     
-    "declaration-property-value-whitelist": {
-      "/color/": ["inherit", "initial", "unset", "currentColor", "transparent", "/^@/"],
-      "font-weight": ["inherit", "initial", "unset", "bold", "normal", "/^@/"],
-      "font-style": ["inherit", "initial", "unset", "italic", "normal", "/^@/"],
-      "z-index": ["inherit", "initial", "unset", "/^@/"],
-      "font-size": ["inherit", "initial", "unset", "/^@/"],
-      "font-family": ["inherit", "initial", "unset", "/^@/"]
-    },
-    
     "declaration-property-value-blacklist": {
       "/^border/": ["/\\bnone\\b/"]
     },
@@ -127,18 +117,6 @@ module.exports = {
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
     "selector-attribute-quotes": "always",
-    "selector-class-pattern": [
-      /*
-       .foo-block__bar-element_baz-modifier
-
-       Скобки в коцне нужны для корректной обработки less-миксинов вида .my-mixin() {&:hover {}},
-       что парсится в селектор вида .my-mixin():hover, т.к. полноценной поддержки less нет.
-       */
-      "^[a-z]+[a-z0-9]*(?:-[a-z0-9]+)*(?:__[a-z0-9]+(?:-[a-z0-9]+)*)?(?:_[a-z0-9]+(?:-[a-z0-9]+)*)?(?:\\([^\\)]*\\))?$",
-      {
-        "resolveNestedSelectors": true
-      }
-    ],
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
@@ -208,7 +186,7 @@ module.exports = {
     "at-rule-no-unknown": null,
     "at-rule-semicolon-newline-after": "always",
     "at-rule-semicolon-space-before": "never",
-    "at-rule-whitelist": ["media", "keyframes", "import"],
+    "at-rule-whitelist": null,
     
     "comment-empty-line-before": [
       "always",
