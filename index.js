@@ -54,7 +54,8 @@ module.exports = {
       "ms",
       "deg",
       "vw",
-      "vh"
+      "vh",
+      "fr"
     ],
     
     "value-keyword-case": [
