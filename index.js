@@ -4,7 +4,10 @@ module.exports = {
     "stylelint-order",
     "stylelint-value-list-box-shadow-inset-first"
   ],
-  "extends": "stylelint-config-standard",
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order"
+  ],
   "rules": {
     "block-no-empty": null,
     
@@ -15,8 +18,6 @@ module.exports = {
     
     "font-family-name-quotes": "always-where-recommended",
     "font-family-no-duplicate-names": true,
-    
-    "font-weight-notation": "named-where-possible",
     
     "function-calc-no-unspaced-operator": true,
     "function-comma-newline-after": "always-multi-line",
@@ -248,13 +249,26 @@ module.exports = {
     ],
     "scss/selector-no-redundant-nesting-selector": true,
     
+    "plugin/value-list-box-shadow-inset-first": true,
+  
+    "font-weight-notation": "numeric",
+    "order/properties-order": [],
+    "plugin/rational-order": [true],
     "order/order": [
       "at-variables",
       "declarations",
+      {
+        "type": "at-rule",
+        "name": "extend"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": false
+      },
       "rules",
       "at-rules"
     ],
-    
-    "plugin/value-list-box-shadow-inset-first": true
+    "selector-nested-pattern": ["^&:+", { "severity": "warning" }]
   }
 };
