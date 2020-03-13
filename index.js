@@ -234,7 +234,7 @@ module.exports = {
     
     "no-eol-whitespace": true,
     "no-extra-semicolons": true,
-    "no-invalid-double-slash-comments": true,
+    "no-invalid-double-slash-comments": null,
     "no-missing-end-of-source-newline": true,
     "no-unknown-animations": true,
     
