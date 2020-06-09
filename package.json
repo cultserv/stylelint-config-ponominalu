@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-ponominalu",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "ponominalu.ru config for stylelint",
   "main": "index.js",
   "author": "Ponominalu.ru",
